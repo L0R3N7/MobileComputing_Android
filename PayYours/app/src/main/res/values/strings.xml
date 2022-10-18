@@ -1,4 +1,7 @@
 <resources>
     <string name="app_name">PayYours</string>
     <string name="label_edit_settings">Edit Settings</string>
+    <string name="savedPricePerSeat">savedPricePerSeat</string>
+    <string name="savedPlayers">savedPlayers</string>
+    <string name="savedSeats">savedSeats</string>
 </resources>

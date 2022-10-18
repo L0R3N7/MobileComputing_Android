@@ -13,4 +13,12 @@
         <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
     </style>
+
+
+    <style name="Dialog" parent="Theme.AppCompat.Dialog">
+        <item name="windowFixedWidthMajor">70%</item>
+        <item name="windowFixedWidthMinor">70%</item>
+    </style>
+
+
 </resources>
