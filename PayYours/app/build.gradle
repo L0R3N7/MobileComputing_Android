@@ -1,12 +1,16 @@
 plugins {
     id 'com.android.application'
     id 'org.jetbrains.kotlin.android'
-    id 'kotlin-android-extensions'
+    id 'kotlin-android'
 }
 
 android {
     namespace 'at.htl.leonding.bhitm5.payyours'
     compileSdk 32
+
+    buildFeatures {
+        viewBinding true
+    }
 
     defaultConfig {
         applicationId "at.htl.leonding.bhitm5.payyours"

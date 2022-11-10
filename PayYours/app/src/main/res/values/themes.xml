@@ -16,8 +16,8 @@
 
 
     <style name="Dialog" parent="Theme.AppCompat.Dialog">
-        <item name="windowFixedWidthMajor">70%</item>
-        <item name="windowFixedWidthMinor">70%</item>
+        <item name="windowFixedWidthMajor">90%</item>
+        <item name="windowFixedWidthMinor">90%</item>
     </style>
 
 
