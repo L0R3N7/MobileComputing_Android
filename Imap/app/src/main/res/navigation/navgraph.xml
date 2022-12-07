@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navgraph"
+    app:startDestination="@id/selectionOverviewFragment">
+
+    <fragment
+        android:id="@+id/helpFragment"
+        android:name="at.htl.leonding.bhitm5.imap.HelpFragment"
+        android:label="Hilfe"
+        tools:layout="@layout/fragment_help" />
+    <fragment
+        android:id="@+id/selectionOverviewFragment"
+        android:name="at.htl.leonding.bhitm5.imap.SelectionOverviewFragment"
+        android:label="Imap Overview"
+        tools:layout="@layout/fragment_selection_overview" >
+        <action
+            android:id="@+id/action_selectionOverviewFragment_to_selectionFragment"
+            app:destination="@id/selectionFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/selectionFragment"
+        android:name="at.htl.leonding.bhitm5.imap.SelectionFragment"
+        android:label="Imap Auswahl"
+        tools:layout="@layout/fragment_selection" >
+        <action
+            android:id="@+id/action_selectionFragment_to_selectionOverviewFragment"
+            app:destination="@id/selectionOverviewFragment" />
+    </fragment>
+</navigation>
