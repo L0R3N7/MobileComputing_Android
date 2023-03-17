@@ -39,6 +39,11 @@ class OverviewViewModel : ViewModel() {
     val response: LiveData<String>
         get() = _response
 
+    private val _property = MutableLiveData<MarsProperty>()
+
+    val property: LiveData<MarsProperty>
+        get() = _property
+
     /**
      * Call getMarsRealEstateProperties() on init so we can display status immediately.
      */
@@ -57,6 +62,9 @@ class OverviewViewModel : ViewModel() {
                     response: Response<List<MarsProperty>>
                 ) {
                     _response.value = "Success: ${response.body()?.size} Mars properties retrieved";
+                    if (response.body() != null && response.body()!!.size > 0){
+                        _property.value = response.body()!![0]
+                    }
                 }
 
                 override fun onFailure(call: Call<List<MarsProperty>>, t: Throwable) {
